@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
-    <title>Blog</title>
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>content</title>
 
     <style>
         h1{
             color:#037bfb
         }
     </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">GSLC Ses 6</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -36,17 +37,21 @@
         </ul>
         </div>
     </div>
-    </nav>
-    @foreach($content as $view)
-        <h1>
-            <a href="/single/{{ $view['slug'] }}"> {{ $view['title'] }} </a>
-        </h1>
-        <h2>
-            {{ $view['author'] }}
-        </h2>
-        <p>
-            {{ $view['body'] }}
-        </p>
-    @endforeach
+</nav>
+<div class="arr">
+    <h1>
+        {{ $arr['title'] }}
+    </h1>
+    <h2>
+        {{ $arr['author'] }}
+    </h2>
+    <p>
+        {{ $arr['body'] }}
+    </p>
+</div>
+ <div class="back">
+    <a href="/blog">return</a>
+ </div>
 </body>
+
 </html>

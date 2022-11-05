@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutCont;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
+use App\Models\about;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('student');
-});
+Route::get('/about', [AboutCont::class, 'index']);
 
-Route::get('/blog', function() {
-    return view('blog');
-});
+Route::get('/blog', [BlogController::class, 'blog']);
+
+Route::get('/single/{slug}', [BlogController::class, 'found']);
+

@@ -40,7 +40,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GSLC Ses 5</a>
+    <a class="navbar-brand" href="#">GSLC Ses 6</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -72,36 +72,14 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
           <th>Email</th>
         </tr>
 
+        @foreach ($data as $table)
         <tr>
-            <td>2440006186</td>
-            <td>Giovanni Chandra</td>
-            <td>giovanni.chandra@binus.ac.id</td>
+            <td>{{$table['nim']}}</td>
+            <td>{{$table['nama']}}</td>
+            <td>{{$table['email']}}</td>
         </tr>
+        @endforeach
 
-        <tr>
-            <td>2440013134</td>
-            <td>Shannya Maureen M</td>
-            <td>shannya.michelia@binus.ac.id</td>
-        </tr>
-
-        <tr>
-            <td>2440006186</td>
-            <td>Nathanael Dihyan</td>
-            <td>nathanael.dihyan@binus.ac.id</td>
-        </tr>
-
-        <tr>
-            <td>2440094472</td>
-            <td>Vivianit Indyca Vica</td>
-            <td>vivianit.vica@binus.ac.id</td>
-        </tr>
-
-        <tr>
-            <td>2440108332</td>
-            <td>Azizah Nabilah Anwar</td>
-            <td>azizah.anwar@binus.ac.id@binus.ac.id</td>
-
-        </tr>
     </table>
 </body>
 </html>
